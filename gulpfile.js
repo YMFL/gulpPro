@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     minifyHTML = require('gulp-htmlmin'),
     revall = require('gulp-rev-all'),
+    proxy = require('http-proxy-middleware'),
     rev={
         dontRenameFile: [
             /\/favicon.ico$/g,
@@ -79,7 +80,10 @@ function serve() {
         server: {
             baseDir: './src/'
         },
-        port:2017
+        port:2017,
+        middleware:[
+            // proxy({target: 'http://i.vsea.com.cn:8788/', changeOrigin: true})
+        ]
     });
     gulp.watch("src/less/**/*.less", ['less']);
     gulp.watch(['src/html/*.html', 'src/css/*.css', 'src/less/**/*.less', 'src/js/**/*.js'], reload);
