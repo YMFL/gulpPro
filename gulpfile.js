@@ -8,9 +8,24 @@ var gulp = require('gulp'),
     open = require('gulp-open'),
     minifyJS = require('gulp-uglify'),
     minifyCSS = require('gulp-minify-css'),
-    minifyHTML = require('gulp-htmlmin');
-
-var DIST ='build';
+    minifyHTML = require('gulp-htmlmin'),
+    revall = require('gulp-rev-all'),
+    rev={
+        dontRenameFile: [
+            /\/favicon.ico$/g,
+            /\/index.html$/g,
+            // /\/login.html$/g
+        ],
+        dontGlobal: [/^\/fonts/g],
+        transformFilename: function(file, hash) {
+            var fileStart = file.path.lastIndexOf('/') + 1;
+            var fileEnd = file.path.lastIndexOf('.');
+            var ext = file.path.slice(fileStart, fileEnd);
+            return ext + "." + hash.substr(0, 5) + file.path.slice(fileEnd);
+        }
+    };
+var DIST ='build/src';
+var MD5 ='build/MD5';
 var reload = browserSync.reload;
 //编译任务
 //编译less为css文件
@@ -21,7 +36,7 @@ gulp.task('copy',['clean'],function(){
         .pipe(gulp.dest(DIST));
 });
 gulp.task('clean', function () {
-    return gulp.src(DIST, {read: false})
+    return gulp.src('build', {read: false})
         .pipe(clean());
 });
 gulp.task('open', function(){
@@ -46,12 +61,18 @@ gulp.task('html',['clean'],function () {
         }))
         .pipe(gulp.dest(DIST));
 });
+gulp.task('md5',['less','js','css','html','copy'],function () {
+    // return gulp.src(DIST+'/**')
+        // .pipe(revall.revision(rev))
+        // .pipe(revall.manifestFile(rev))
+        // .pipe(gulp.dest(MD5));
+})
+
 
 //脚本任务
 gulp.task('serve', ['less','open'], serve);
 gulp.task('default', ['serve']);
-gulp.task('build',['less','js','css','html','copy'])
-
+gulp.task('build',['md5'])
 
 function serve() {
     browserSync({
