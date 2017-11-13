@@ -27,7 +27,10 @@
   background-image: url("../img/bg5.png");
   background-repeat: no-repeat;
 }
-
+.bg6 {
+  background-image: url("../img/bg6.png");
+  background-repeat: no-repeat
+}
 .contentRelative {
   position: relative;
   height: 100%;
@@ -45,7 +48,7 @@
 .bg1-logo {
   background-image: url("../img/logo.png");
   width: 300px;
-  height: 120px;
+  height: 61px;
   top: 100px;
   left: 0;
   opacity: 0;
@@ -54,9 +57,9 @@
 }
 
 .bg1-whh-top {
-  background-image: url("../img/bg1-whh-top.png");
-  width: 901px;
-  height: 74px;
+  text-align: center;
+  font-size: 70px;
+  color: #f90;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -66,9 +69,9 @@
 }
 
 .bg1-whh-bottom {
-  background-image: url("../img/bg1-whh-bottom.png");
-  width: 692px;
-  height: 64px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -76,19 +79,6 @@
   transition: 1s 0.5s bottom, 1s 0.5s opacity;
   -webkit-transition: 1s 0.5s bottom, 1s 0.5s opacity;
 }
-
-.bg1-footer-hometown {
-  background-image: url("../img/bg1-hometown.png");
-  width: 237px;
-  height: 28px;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 1s 0.5s bottom, 1s 0.5s opacity;
-  -webkit-transition: 1s 0.5s bottom, 1s 0.5s opacity;
-}
-
 .bg1-footer-down {
   cursor: pointer;
   background-image: url("../img/bg1-down.png");
@@ -161,9 +151,8 @@
 
 /*bg2 动画*/
 .bg2-product {
-  background-image: url("../img/bg2-product.png");
-  width: 312px;
-  height: 72px;
+  font-size: 56px;
+  color: #999;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -185,7 +174,8 @@
 }
 
 .bg2-zwxy {
-  background-image: url("../img/bg2-zwxy.png");
+  text-decorationnone:none;
+  font-size: 40px;
   width: 400px;
   height: 80px;
   top: 35%;
@@ -197,7 +187,8 @@
 }
 
 .bg2-fast {
-  background-image: url("../img/bg2-fast.png");
+  text-decorationnone:none;
+  font-size: 40px;
   width: 400px;
   height: 80px;
   top: 50%;
@@ -209,7 +200,8 @@
 }
 
 .bg2-buyBuyBuy {
-  background-image: url("../img/bg2-buyBuyBuy.png");
+  text-decorationnone:none;
+  font-size: 40px;
   width: 400px;
   height: 80px;
   top: 65%;
@@ -247,9 +239,9 @@
 
 /*bg3 动画*/
 .bg3-title {
-  background-image: url("../img/bg3-title.png");
-  width: 379px;
-  height: 44px;
+  font-size: 56px;
+  color: #999;
+  width: 800px;
   top: 20%;
   left: 115%;
   transform: translate(-50%, -50%);
@@ -259,7 +251,6 @@
 }
 
 .bg3-info {
-  background-image: url("../img/bg3-info.png");
   width: 668px;
   height: 388px;
   top: 50%;
@@ -268,6 +259,11 @@
   opacity: 0;
   transition: 0.5s left, 0.5s opacity;
   -webkit-transition: 0.5s left, 0.5s opacity;
+}
+.bg3-info p{
+  font-size: 20px;
+  padding: 40px 40px 0px 100px;
+  color: #a1a1a1;
 }
 
 .bg3-mac {
@@ -280,18 +276,6 @@
   opacity: 0;
   transition: 0.5s 0.5s left, 0.5s 0.5s opacity;
   -webkit-transition: 0.5s 0.5s left, 0.5s 0.5s opacity;
-}
-
-.bg3-knowMore {
-  background-image: url("../img/bg3-knowMore.png");
-  width: 290px;
-  height: 80px;
-  top: 80%;
-  left: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.5s 0.2s left, 0.5s 0.2s opacity;
-  -webkit-transition: 0.5s 0.2s left, 0.5s 0.2s opacity;
 }
 
 .step3 .bg3-title {
@@ -313,11 +297,58 @@
   opacity: 1;
   left: 70%;
 }
+.bg6-top {
+  font-size: 56px;
+  color: #999;
+  text-align: center;
+  height: 55px;
+  top: 15%;
+  left: 45%;
+}
+.bg6-mid {
+  font-size: 56px;
+  color: #999;
+  height: 55px;
+  position: relative;
+}
 
+.bg6-mid1 {
+  background-image: url("../img/bg6-mid1.png");
+  position: absolute;
+  width: 277px;
+  height: 341px;
+  top: 15%;
+  left:5%;
+}
+.bg6-mid2 {
+  background-image: url("../img/bg6-mid2.png");
+  position: absolute;
+  width: 277px;
+  height: 269px;
+  top: 15%;
+  left:27%;
+}
+.bg6-mid3 {
+  background-image: url("../img/bg6-mid3.png");
+  position: absolute;
+  width: 278px;
+  height: 342px;
+  top: 15%;
+  left:49%;
+}
+.bg6-mid4 {
+  background-image: url("../img/bg6-mid4.png");
+  position: absolute;
+  width: 277px;
+  height: 269px;
+  top: 15%;
+  left:71%;
+}
 /*bg4*/
 .bg4-top {
-  background-image: url("../img/bg4-top.png");
-  width: 950px;
+  font-size: 56px;
+  color: #999;
+  text-align: center;
   height: 55px;
   top: 0%;
   left: 50%;
@@ -325,43 +356,39 @@
   opacity: 0;
   transition: 0.7s top, 0.7s opacity;
   -webkit-transition: 0.7s top, 0.7s opacity;
+}
+.bg4-left{
+  background-image: url("../img/qr.png");
+  height: 200px;
+  width: 200px;
+  top: 40%;
+  left: 25%;
 }
 
 .bg4-mid {
-  background-image: url("../img/bg4-mid.png");
+  color: #ffffff;
   width: 714px;
-  height: 55px;
-  top: 0%;
-  left: 50%;
+  top: 0;
+  left: 75%;
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: 0.7s top, 0.7s opacity;
   -webkit-transition: 0.7s top, 0.7s opacity;
 }
-
+.bg4-mid li{
+  padding: 20px 0;
+}
 .bg4-bottom {
-  background-image: url("../img/bg4-bottom.png");
   height: 28px;
   width: 507px;
-  top: 0%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: 0.7s top, 0.7s opacity;
-  -webkit-transition: 0.7s top, 0.7s opacity;
+  transition: .7s top, .7s opacity;
+  -webkit-transition: .7s top, .7s opacity
 }
 
-.bg4-knowDetail {
-  background-image: url("../img/bg4-knowDetail.png");
-  width: 200px;
-  height: 80px;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.7s top, 0.7s opacity;
-  -webkit-transition: 0.7s top, 0.7s opacity;
-}
 
 .step4 {
   .bg4-top {
@@ -544,39 +571,6 @@
   opacity: 1;
 }
 
-.bg5-left {
-  background-image: url("../img/bg5-left.png");
-  width: 329px;
-  height: 22px;
-  top: 85%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.7s top, 0.7s opacity;
-  -webkit-transition: 0.7s top, 0.7s opacity;
-}
-
-.bg5-right {
-  background-image: url("../img/bg5-right.png");
-  width: 305px;
-  height: 22px;
-  top: 85%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.7s top, 0.7s opacity;
-  -webkit-transition: 0.7s top, 0.7s opacity;
-}
-
-.step5 .bg5-left {
-  opacity: 1;
-  top: 80%;
-}
-
-.step5 .bg5-right {
-  opacity: 1;
-  top: 80%;
-}
 #fp-nav{
 
 }
